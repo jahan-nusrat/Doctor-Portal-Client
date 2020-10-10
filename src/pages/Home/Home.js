@@ -12,11 +12,13 @@ https://i.ibb.co/kmM7TjG/tooth-1.png
 https://i.ibb.co/WKH5XZx/tooth.png */
 import React from 'react'
 import Header from '../../components/Home/Header/Header'
+import Services from '../../components/Home/Services/Services'
 
 const Home = () => {
     return (
         <div>
             <Header />
+            <Services />
         </div>
     )
 }
