@@ -9,7 +9,7 @@ const AppointHeroLeft = () => {
 
     const handleDateChange=(date)=>{
         setSelectDate(date.toDateString())
-        dispatch(selectedAppointDate(date.toDateString()));
+        dispatch(selectedAppointDate(date.toDateString()))
     }
 
     return (
