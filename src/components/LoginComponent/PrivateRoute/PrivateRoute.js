@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { useContext } from 'react';
-import { UserContext } from '../../App';
 import jwt_decode from "jwt-decode";
+import { useSelector } from 'react-redux';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const loggedInUser = useSelector(state => state.loginInfo)
 
     const isLoggedIn = () => {
         const token = sessionStorage.getItem('token');

@@ -1,7 +1,8 @@
-const { APPOINT_DATE } = require("./action")
+const { APPOINT_DATE, LOGIN_USER } = require("./action")
 
 const initialState={
-    selectDate:''
+    selectDate: '',
+    loginInfo: {}
 }
 
 const reducer = (state=initialState, action)=>{
@@ -10,6 +11,11 @@ const reducer = (state=initialState, action)=>{
             return{
                 ...state,
                 selectDate: action.payload
+            }
+        case LOGIN_USER:
+            return {
+                ...state,
+                loginInfo: action.payload
             }
         default:
             return state;

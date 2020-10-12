@@ -1,4 +1,5 @@
 export const APPOINT_DATE='APPOINT_DATE';
+export const LOGIN_USER = 'LOGIN_USER';
 
 export const selectedAppointDate=(date)=>{
     return{
@@ -6,3 +7,10 @@ export const selectedAppointDate=(date)=>{
         payload : date
     }
 }
+
+export const loggedInUser = (info) => {
+    return {
+        type: LOGIN_USER,
+        payload: info
+    };
+};
