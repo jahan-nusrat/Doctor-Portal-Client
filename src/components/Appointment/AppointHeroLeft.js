@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import AppointCalender from './AppointCalender';
 import {selectedAppointDate} from '../redux/action'
 
 const AppointHeroLeft = () => {
     const dispatch=useDispatch();
     const [selectDate,setSelectDate]= useState(new Date());
-
+    console.log(selectDate)
     const handleDateChange=(date)=>{
         setSelectDate(date.toDateString())
         dispatch(selectedAppointDate(date.toDateString()))
